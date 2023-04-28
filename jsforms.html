@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="form_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
+    <script>
+        function prom() {
+                const crno=prompt("Enter your College Registration Number:");
+        }
+        function validate()
+        {
+            console.log('worked');
+            const name=document.querySelector('#name').value;
+            const email=document.querySelector('#email').value;
+            var atposition=email.indexOf("@");  
+            var dotposition=email.lastIndexOf(".");  
+            const phno=document.querySelector('#phno').value;
+            const p=/^\d{10}$/;
+            const dept=document.querySelector('#dept').value;
+            const domain=document.querySelector('#doma').value;
+            const tname=document.querySelector("#tname").value;
+            const coll=document.querySelector('#coll').value;
+            const pst=document.querySelector('#pst').value;
+            if(name==""||name==null)
+            {
+                alert("Name not Entered!");
+                return false;
+            }
+            if (atposition<1 || dotposition<atposition+2 || dotposition+2>=email.length)
+            {  
+                alert("Please Enter a Valid E-mail Address"); 
+                return false; 
+            }
+            if (phno.length==10)
+            {
+                if (phno.match(p))
+                {
+                    console.log('');
+                }
+                else
+                {
+                    alert("Enter a Valid Phone Number!");
+                    return false;
+                }
+            }
+            else
+            {
+                alert("Enter a Valid Phone Number!");
+                return false;
+            }
+
+            if (dept==""||dept==null) {
+                alert("Department not Selected!");
+                return false;
+            }
+            if (domain==""||domain==null) {
+                alert("Domain not Selected!");
+                return false;
+            }
+            if (tname==""||tname==null) {
+                alert("Team Name not Entered!");
+                return false;
+            }
+            if (coll==""||coll==null) {
+                alert("College Name not Entered!");
+                return false;
+            }
+            if (pst==""||pst==null){
+                alert("Problem Statement not Entered!");
+                return false;
+            }
+            else
+            {
+                if (pst.length>100) {
+                    console.log('');
+                }
+                else
+                {
+                    alert("Problem Statement too short!");
+                    return false;
+                }
+            }
+            if (confirm("Are your entered details correct?: ") == true) {
+                return true;
+            } 
+            else {
+                return false;
+            }
+        }
+    </script>
+</head>
+<body onload="prom()">
+    <div id="form_div">
+        <form action="final.html" onsubmit="return validate();">
+            <p>
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Enter Full Name">
+            </p>
+            <p>
+                <label for="email">Email</label>
+                <input type="text" id="email" placeholder="Enter College mail-id">
+            </p>
+            <p>
+                <label for="phno">Phone No</label>
+                <input type="text" id="phno" placeholder="Enter Phone No">
+            </p>
+            <p>
+                <label for="dept">Department</label>
+                <select id="dept">
+                    <option value="">Select Department</option>
+                    <option value="CSE">CSE</option>
+                    <option value="ISE">ISE</option>
+                    <option value="AIDS">AIDS</option>
+                    <option value="IT">IT</option>
+                </select>
+            </p>
+            <p>
+                <label for="doma">Domain</label>
+                <select id="doma">
+                    <option value="">Select Domain</option>
+                    <option value="AI">AI/ML</option>
+                    <option value="Cloud">Cloud Computing</option>
+                    <option value="cyber">Cyber Security</option>
+                    <option value="Blockchain">Blockchain</option>
+                </select>
+            </p>
+            <p>
+                No of Team Members: &nbsp;
+                <label for="2">2</label>
+                <input type="radio" name="notm" id="2" value="2" checked="checked">
+                <label for="3">3</label>
+                <input type="radio" name="notm" id="3" value="3">
+                <label for="4">4</label>
+                <input type="radio" name="notm" id="4" value="4">
+            </p>
+            <p>
+                <label for="tname">Team Name</label>
+                <input type="text" id="tname" placeholder="Enter Team Name">
+            </p>
+            <p>
+                <label for="">College</label>
+                <input type="text" id="coll" placeholder="Enter College Name">
+            </p>
+            <p>
+                <label for="pst">Problem Statement</label>
+                <br>
+                <textarea id="pst" placeholder="Enter choosen problem statement"></textarea>
+            </p>
+            <p id="pbot">
+                <button id="bon" style="margin-left: 100px;">Submit</button>
+            </p>
+        </form>
+    </div>
+</body>
+</html>
+
