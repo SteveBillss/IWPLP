@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<students xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="schema.xsd">
+    <student>
+        <name>Mahin</name>
+        <dept>CSE</dept>
+        <address>Coimbatore</address>
+    </student>
+    <student>
+        <name>Navin</name>
+        <dept>CSE</dept>
+        <address>Hosur</address>
+    </student>
+    <student>
+        <name>Vasanth</name>
+        <dept>CSE</dept>
+        <address>Erode</address>
+    </student>
+    <student>
+        <name>Surya</name>
+        <dept>CSE</dept>
+        <address>Chennai</address>
+    </student>
+    <student>
+        <name>Allwin</name>
+        <dept>CSE</dept>
+        <address>Bangalore</address>
+    </student>
+    <student>
+        <name>Rathidharan</name>
+        <dept>CSE</dept>
+        <address>Dindugul</address>
+    </student>
+    <student>
+        <name>Ram</name>
+        <dept>CSE</dept>
+        <address>Kerala</address>
+    </student>
+    <student>
+        <name>Vignesh</name>
+        <dept>CSE</dept>
+        <address>Trichy</address>
+    </student>
+    <student>
+        <name>Sam</name>
+        <dept>CSE</dept>
+        <address>Delhi</address>
+    </student>
+    <student>
+        <name>Tarun</name>
+        <dept>CSE</dept>
+        <address>Erode</address>
+    </student>
+</students>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="students">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="student" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="name" type="xs:string" />
+              <xs:element name="dept" type="xs:string" />
+              <xs:element name="address" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
