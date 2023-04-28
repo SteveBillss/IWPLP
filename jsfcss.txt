@@ -1,0 +1,87 @@
+body{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 23px;
+    background:url('/Web_Code/web/images/banner.jpg') no-repeat;
+    background-size: cover;
+    background-position:0;
+}
+
+h1{
+    text-align: center;
+}
+
+#form_div{
+    background:url(images/fobackn.jpg);
+    width: 400px;
+    height: 560px;
+    border-style: inset;
+    border-color: black;
+    border-radius: 10px;
+    border-width: 4px;
+    box-shadow: rgba(0, 0, 0, 0.4) 5px 5px, rgba(133, 122, 129, 0.3) 10px 10px, rgba(127, 105, 119, 0.2) 15px 15px, rgba(46, 29, 40, 0.1) 20px 20px, rgba(0, 0, 0, 0.05) 25px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+    margin-left: 420px;
+    margin-top: 10px;
+}
+
+button{
+    text-align: center;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-weight: 600;
+    width: 90px;
+    height: 40px;
+    font-size: 20px;
+    border-color: black;  
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
+    transition: 1s; 
+}
+
+#name{
+    margin-left: 40px;
+    width: 220px;
+}
+
+#email{
+    margin-left: 43px;
+    width: 220px;
+}
+
+#phno{
+    margin-left: 13px;
+    width: 220px;
+}
+
+#dept{
+    margin-left: 4px;
+    width: 220px;
+}
+
+#coll{
+    margin-left: 34px;
+    width: 210px;
+}
+
+#pst{
+    width:305px;
+    height:70px;
+}
+
+#tname{
+    margin-left: 5px;
+    width: 210px;
+}
+
+#bon{
+    margin-bottom: 10px;
+}
+
+#pbot{
+    margin-left: 2px;
+}
+
+#doma{
+    margin-left: 35px;
+    width: 220px;
+}
