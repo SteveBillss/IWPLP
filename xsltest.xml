@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="final_xsl.xsl"?>
+<students>
+     <student>
+        <name>M</name>
+        <roll-no>60</roll-no>
+        <dob>2002-03-27</dob>
+        <courses>
+            <one>DWDM</one>
+            <two>CN</two>
+        </courses>
+    </student>
+    <student>
+        <name>N</name>
+        <roll-no>62</roll-no>
+        <dob>2002-03-20</dob>
+        <courses>
+            <one>DDM</one>
+            <two>CNN</two>
+        </courses>
+    </student>
+</students> 
+
+
+
+
+<!-- <?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="final_xsl.xsl"?>
+<students>
+    <student>
+        <name>M</name>
+        <roll-no>60</roll-no>
+        <dob>2002-03-27</dob>
+    </student>
+    <student>
+        <name>N</name>
+        <roll-no>62</roll-no>
+        <dob>2002-03-20</dob>
+    </student>
+</students> -->
