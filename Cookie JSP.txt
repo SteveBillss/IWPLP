@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form action="login.jsp" method="POST">
+            Username:<input type="text" id="name" name="name">
+            Password:<input type="password" id="pass" name="pass">
+            Remember:<input type="checkbox" id="box" name="box">
+            <button>Submit</button>
+        </form>
+    </body>
+</html>
+
+
+
+----------------------------------------------JSP-------------------------------------------------
+<%-- 
+    Document   : login.jsp
+    Created on : 01-Jun-2023, 4:26:10 am
+    Author     : Mahin Prakash
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <body>
+        <%
+            String name=request.getParameter("name");
+            String pass=request.getParameter("pass");
+            String rem=request.getParameter("box");
+            if(val(name,pass))
+            {
+               if(rem!=null)
+               {
+                  Cookie cookie=new Cookie("username",name);
+                  cookie.setMaxAge(60*60*24*30);
+                  response.addCookie(cookie);
+               }
+               response.sendRedirect("mainn.jsp");
+            }
+            else{
+               out.println("<h1>Invalid Credentials</h1>");
+            }
+        %>
+        <%! private boolean val(String name,String pass){
+            return(name.equals("Mahin")&&pass.equals("1234"));
+        }
+        %>
+    </body>
+</html>
