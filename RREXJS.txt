@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        img{
+            border: inset black thick;
+        }
+        #message{
+            text-align: center;
+            font-weight: bold;
+            visibility: hidden;
+        }
+        #fmessage{
+            text-align: center;
+            font-weight: bold;
+        }
+        form{
+            margin-top: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Rollover and Randomover Effect</h1>
+    <div>
+        <img id="im" src="/images/abstract.jpg" style="width: 500px;height: 200px; ">
+    </div>
+    <p id="message">Image is hovered upon!</p>
+    <hr>
+    <form onsubmit="erca()" id="f">
+        Enter a no : <input type="number" id="in"><br>
+        <button>Submit</button>
+    </form>
+    <p id="fmessage"></p>
+    <script>
+        function rando(a,b) {
+            return Math.floor(Math.random()*(a-b+1))+b;
+        }
+
+        var image=document.querySelector("#im");
+        var imessage=document.querySelector("#message");
+        image.addEventListener('mouseover',function(){
+            var r=rando(0,5);
+            console.log(r);
+            if (r===1) {
+                image.src="/images/vecteezy.jpg";    
+            }
+            else if (r===2) {
+                image.src="/images/foback.jpg"; 
+            }
+            else if (r===3) {
+                image.src="/images/abstract.jpg"; 
+            }
+            else{
+                image.src="/images/5570863.jpg"; 
+            }
+            imessage.style.visibility="visible";
+        })
+        image.addEventListener('mouseleave',function(){
+          
+            imessage.style.visibility="hidden";
+        })
+        function erca() {
+            var ono=document.querySelector("#in").value;
+            var m=document.querySelector("#fmessage");
+            var form=document.querySelector("#f");
+            try {
+                if(ono==""){
+                    throw "Number not entered!";
+                }
+                var no=Number(ono);
+                if (no<0) {
+                    throw "-ve Numbers are invalid!";
+                    
+                }
+                else{
+                    throw "Valid Number!";
+                }
+            }catch (error) {
+                m.innerHTML=error;
+                console.log(error);
+            }     
+        }
+        form.addEventListener('submit', function(event){
+            event.preventDefault();
+        })
+    </script>
+</body>
+</html>  
